@@ -1,22 +1,40 @@
 package Core.Zombies;
 
+import Core.Zombies.ZombieProperties.ZombieProperties;
+import jdk.internal.net.http.common.Pair;
+
 public class Zombie {
     private final String Type;
-    /** 6 means random
-     *  7 means "previous lane"
-     */
-    private final int Lane;
+    private final String Lane;
 
-    public Zombie(String type, int lane) {
+    public Zombie(String type, String lane) {
         Type = type;
         Lane = lane;
     }
 
+    public static Zombie FromString(String type, String lane) {
+        return new Zombie("RTID(" + type + "@ZombieTypes)", lane);
+    }
     public static Zombie New(String type, int lane) {
-        return new Zombie(type, lane);
+        String hi = null;
+        if (lane < 5) {
+            hi = String.valueOf(lane);
+        }
+        else if (lane == 5){
+            hi = "prev";
+        }
+        return new Zombie("RTID(" + type + "@ZombieTypes)", hi);
     }
 
     public static Zombie New(String type) {
-        return new Zombie(type, 6);
+        return new Zombie("RTID(" + type + "@ZombieTypes)", null);
+    }
+
+    public String getLane() {
+        return Lane;
+    }
+
+    public String getType() {
+        return Type;
     }
 }
