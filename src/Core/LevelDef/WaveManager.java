@@ -27,9 +27,9 @@ public class WaveManager {
         FlagWaveVeteranOverrideTypes = flagWaveVeteranOverrideTypes;
         WaveSpendingCostIncrement = waveSpendingCostIncrement;
         WaveSpendingPoints = waveSpendingPoints;
+        SpawnColEnd = spawnColEnd;
         ZombieCountdownHugeWaveDelay = zombieCountdownHugeWaveDelay;
         SuppressFlagZombie = suppressFlagZombie;
-        SpawnColEnd = spawnColEnd;
         SpawnColStart = spawnColStart;
         this.levelJam = levelJam;
         int MaxWaves = 0;
