@@ -13,8 +13,25 @@ public class WaveManager {
     private final int[] FlagWaveVeteranOverrideTypes;
     private final int WaveSpendingCostIncrement;
     private final int WaveSpendingPoints;
+    private final int ZombieCountdownHugeWaveDelay;
+    private final boolean SuppressFlagZombie;
+    private final int SpawnColEnd;
+    private final int SpawnColStart;
 
-    public WaveManager(ArrayList<Wave> Waves) {
+    // ONLY CHANGE IF YOU HAVE MODERN DAY STAGE ENABLED: Failure to do so will cause Exception!
+    private final String levelJam;
+
+    public WaveManager(ArrayList<Wave> Waves, Float maxNextWaveHealthPercentage, Float minNextWaveHealthPercentage, int[] flagWaveVeteranOverrideTypes, int waveSpendingCostIncrement, int waveSpendingPoints, int zombieCountdownHugeWaveDelay, boolean suppressFlagZombie, int spawnColEnd, int spawnColStart, String levelJam) {
+        MaxNextWaveHealthPercentage = maxNextWaveHealthPercentage;
+        MinNextWaveHealthPercentage = minNextWaveHealthPercentage;
+        FlagWaveVeteranOverrideTypes = flagWaveVeteranOverrideTypes;
+        WaveSpendingCostIncrement = waveSpendingCostIncrement;
+        WaveSpendingPoints = waveSpendingPoints;
+        ZombieCountdownHugeWaveDelay = zombieCountdownHugeWaveDelay;
+        SuppressFlagZombie = suppressFlagZombie;
+        SpawnColEnd = spawnColEnd;
+        SpawnColStart = spawnColStart;
+        this.levelJam = levelJam;
         int MaxWaves = 0;
         for (Wave wave : Waves) {
             if (wave.getInWave() > MaxWaves) {

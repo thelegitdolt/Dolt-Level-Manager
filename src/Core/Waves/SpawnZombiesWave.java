@@ -11,13 +11,13 @@ public class SpawnZombiesWave {
     public static final String STAGGERED_PATTERN = "ZombieSpawnerPatternStaggered";
     private final String[] aliases;
     private transient final int inWave;
+    private String objclass = "SpawnZombiesJitteredWaveActionProps";
 
     private final SpawnZombieWaveObjData objdata;
 
     public SpawnZombiesWave(String[] name, int inWave, SpawnZombieWaveObjData objdata) {
         this.aliases = name;
         this.inWave = inWave;
-        String objclass = "SpawnZombiesJitteredWaveActionProps";
         this.objdata = objdata;
     }
 
@@ -38,14 +38,13 @@ public class SpawnZombiesWave {
     }
 
     /**
-     * @param
-     * @return This exact wave, but with a different inWave
+     * Simple constructor that returns a SpawnZombieWave with only Zombies in it.
      */
-    private static SpawnZombiesWave New(ArrayList<Zombie> zombies, int inwave){
+    public static SpawnZombiesWave New(ArrayList<Zombie> zombies, int inwave){
         return new SpawnZombiesWave(new String[]{"Wave" + inwave + DUtil.getAlphaNumericString(8)}, inwave, new SpawnZombieWaveObjData(null, zombies,null, 0));
     }
 
-    private static SpawnZombiesWave New(ArrayList<Zombie> zombies, int inwave, int PF){
+    public static SpawnZombiesWave New(ArrayList<Zombie> zombies, int inwave, int PF){
         return new SpawnZombiesWave(new String[]{"Wave" + inwave + DUtil.getAlphaNumericString(8)},
                 inwave,
                 new SpawnZombieWaveObjData(
@@ -56,7 +55,7 @@ public class SpawnZombiesWave {
         );
     }
 
-    private static SpawnZombiesWave StaggeredWave(ArrayList<Zombie> zombies, int inwave, int PF){
+    public static SpawnZombiesWave StaggeredWave(ArrayList<Zombie> zombies, int inwave, int PF){
         return new SpawnZombiesWave(new String[]{"Wave" + inwave + DUtil.getAlphaNumericString(8)},
                 inwave,
                 new SpawnZombieWaveObjData(
@@ -67,7 +66,7 @@ public class SpawnZombiesWave {
         );
     }
 
-    private static SpawnZombiesWave ForcedConditionWave(ArrayList<Zombie> zombies, int inwave, int PF, Condition condition){
+    public static SpawnZombiesWave ForcedConditionWave(ArrayList<Zombie> zombies, int inwave, int PF, Condition condition){
         return new SpawnZombiesWave(new String[]{"Wave" + inwave + DUtil.getAlphaNumericString(8)},
                 inwave,
                 new SpawnZombieWaveObjData(

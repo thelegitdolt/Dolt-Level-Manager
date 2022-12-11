@@ -2,11 +2,11 @@ package Core.Zombies;
 
 public class Zombie {
     private final String Type;
-    private final String Lane;
+    private final String Row;
 
-    public Zombie(String type, String lane) {
+    public Zombie(String type, String row) {
         Type = type;
-        Lane = lane;
+        Row = row;
     }
 
     public static Zombie FromString(String type, String lane) {
@@ -27,8 +27,8 @@ public class Zombie {
         return new Zombie("RTID(" + type + "@ZombieTypes)", null);
     }
 
-    public String getLane() {
-        return Lane;
+    public String getRow() {
+        return Row;
     }
 
     public String getType() {
