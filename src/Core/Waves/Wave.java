@@ -1,16 +1,16 @@
 package Core.Waves;
 
 public abstract class Wave {
-    private final String Name;
+    private final String aliases;
     private final int inWave;
 
     protected Wave(String name, int inWave) {
-        Name = name;
+        aliases = name;
         this.inWave = inWave;
     }
 
-    public String getName() {
-        return Name;
+    public String getAliases() {
+        return aliases;
     }
 
     public int getInWave() {

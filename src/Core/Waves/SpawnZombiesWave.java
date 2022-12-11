@@ -1,24 +1,23 @@
-package Core.Zombies;
+package Core.Waves;
 
 import Core.MiscObj.Condition;
 import Core.MiscObj.SpawnZombieWaveObjData;
 import Core.Util.DUtil;
+import Core.Zombies.Zombie;
 
 import java.util.ArrayList;
 
 public class SpawnZombiesWave {
-    // Staggered Pattern for bowling levels
     public static final String STAGGERED_PATTERN = "ZombieSpawnerPatternStaggered";
-    private final String[] name;
+    private final String[] aliases;
     private transient final int inWave;
 
-    private final String objclass;
     private final SpawnZombieWaveObjData objdata;
 
     public SpawnZombiesWave(String[] name, int inWave, SpawnZombieWaveObjData objdata) {
-        this.name = name;
+        this.aliases = name;
         this.inWave = inWave;
-        this.objclass = "SpawnZombiesJitteredWaveActionProps";
+        String objclass = "SpawnZombiesJitteredWaveActionProps";
         this.objdata = objdata;
     }
 
@@ -27,20 +26,20 @@ public class SpawnZombiesWave {
      * Returns a new Wave with a different inWave.
      */
     private SpawnZombiesWave asWave(int inwave) {
-        return new SpawnZombiesWave(name, inwave, objdata);
+        return new SpawnZombiesWave(aliases, inwave, objdata);
     }
 
     public int getInWave() {
         return inWave;
     }
 
-    public String getName() {
-        return name[0];
+    public String getAliases() {
+        return aliases[0];
     }
 
     /**
      * @param
-     * @return This exact wave, but in a different Wave
+     * @return This exact wave, but with a different inWave
      */
     private static SpawnZombiesWave New(ArrayList<Zombie> zombies, int inwave){
         return new SpawnZombiesWave(new String[]{"Wave" + inwave + DUtil.getAlphaNumericString(8)}, inwave, new SpawnZombieWaveObjData(null, zombies,null, 0));

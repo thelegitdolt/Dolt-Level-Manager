@@ -1,8 +1,5 @@
 package Core.Zombies;
 
-import Core.Zombies.ZombieProperties.ZombieProperties;
-import jdk.internal.net.http.common.Pair;
-
 public class Zombie {
     private final String Type;
     private final String Lane;

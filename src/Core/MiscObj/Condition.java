@@ -8,4 +8,8 @@ public class Condition {
         Condition = condition;
         Duration = duration;
     }
+
+    public static Condition New(String cond, int dur) {
+        return new Condition(cond, dur);
+    }
 }
