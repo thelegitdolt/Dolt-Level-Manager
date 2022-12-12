@@ -7,7 +7,7 @@ import Core.Zombies.Zombie;
 
 import java.util.ArrayList;
 
-public class SpawnZombiesWave {
+public class SpawnZombiesWave extends Wave{
     public static final String STAGGERED_PATTERN = "ZombieSpawnerPatternStaggered";
     private final String[] aliases;
     private transient final int inWave;
@@ -16,6 +16,7 @@ public class SpawnZombiesWave {
     private final SpawnZombieWaveObjData objdata;
 
     public SpawnZombiesWave(String[] name, int inWave, SpawnZombieWaveObjData objdata) {
+        super(name, inWave);
         this.aliases = name;
         this.inWave = inWave;
         this.objdata = objdata;
@@ -31,10 +32,6 @@ public class SpawnZombiesWave {
 
     public int getInWave() {
         return inWave;
-    }
-
-    public String getAliases() {
-        return aliases[0];
     }
 
     /**

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52441573-32c0-4560-bf90-ba9389634b2b" name="Changes" comment="This is not needed">
-      <change afterPath="$PROJECT_DIR$/src/Core/Exceptions/MisplacedPiratePlankException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Exceptions/WaveManagerLevelJamNotInMDStageException.java" afterDir="false" />
+    <list default="true" id="52441573-32c0-4560-bf90-ba9389634b2b" name="Changes" comment="what">
+      <change afterPath="$PROJECT_DIR$/src/Core/LevelDef/LevelDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/LevelDef/NewWaves.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/LevelObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/MiscObj/LevelDefinitionObjdata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/MiscObj/NewWavesObjData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/Values/WaveManagerValues.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Level.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/LevelDef/WaveManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/LevelDef/WaveManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Waves/SpawnZombiesWave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Waves/SpawnZombiesWave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Zombies/Zombie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Zombies/Zombie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Workspace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Workspace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/egypt1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/egypt1.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +124,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670791847441</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Wave manager predicates + exceptions????">
+      <created>1670798578999</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670798579000</updated>
+    </task>
+    <task id="LOCAL-00008" summary="what">
+      <created>1670798721429</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670798721429</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +160,8 @@
     <MESSAGE value="SpawnZombiesJitteredWaveActionProps" />
     <MESSAGE value="WaveManager now manages waves" />
     <MESSAGE value="This is not needed" />
-    <option name="LAST_COMMIT_MESSAGE" value="This is not needed" />
+    <MESSAGE value="Wave manager predicates + exceptions????" />
+    <MESSAGE value="what" />
+    <option name="LAST_COMMIT_MESSAGE" value="what" />
   </component>
 </project>

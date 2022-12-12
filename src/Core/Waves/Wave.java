@@ -1,16 +1,13 @@
 package Core.Waves;
 
-public abstract class Wave {
-    private final String aliases;
+import Core.LevelObject;
+
+public class Wave extends LevelObject {
     private final int inWave;
 
-    protected Wave(String name, int inWave) {
-        aliases = name;
+    protected Wave(String[] name, int inWave) {
+        super(name);
         this.inWave = inWave;
-    }
-
-    public String getAliases() {
-        return aliases;
     }
 
     public int getInWave() {
