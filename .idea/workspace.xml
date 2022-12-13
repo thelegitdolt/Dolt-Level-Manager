@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52441573-32c0-4560-bf90-ba9389634b2b" name="Changes" comment="what">
-      <change afterPath="$PROJECT_DIR$/src/Core/LevelDef/LevelDefinition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/LevelDef/NewWaves.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/LevelObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/MiscObj/LevelDefinitionObjdata.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/MiscObj/NewWavesObjData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Values/WaveManagerValues.java" afterDir="false" />
+    <list default="true" id="52441573-32c0-4560-bf90-ba9389634b2b" name="Changes" comment="LevelObject system so I can call getAlias on everything + finished up LevelDefinition">
+      <change afterPath="$PROJECT_DIR$/src/Core/LevelDef/SeedBank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Level.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/LevelDef/WaveManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/LevelDef/WaveManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Workspace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Workspace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/LevelObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/LevelObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/MiscObj/SpawnZombieWaveObjData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/MiscObj/SpawnZombieWaveObjData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670798721429</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="LevelObject system so I can call getAlias on everything + finished up LevelDefinition">
+      <created>1670880042380</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670880042380</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,6 +165,8 @@
     <MESSAGE value="This is not needed" />
     <MESSAGE value="Wave manager predicates + exceptions????" />
     <MESSAGE value="what" />
-    <option name="LAST_COMMIT_MESSAGE" value="what" />
+    <MESSAGE value="Hello" />
+    <MESSAGE value="LevelObject system so I can call getAlias on everything + finished up LevelDefinition" />
+    <option name="LAST_COMMIT_MESSAGE" value="LevelObject system so I can call getAlias on everything + finished up LevelDefinition" />
   </component>
 </project>
