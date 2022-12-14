@@ -1,5 +1,7 @@
 package Core.LevelDef;
 
+import Core.Plant;
+
 import java.util.ArrayList;
 
 public class SeedBank {
@@ -8,25 +10,27 @@ public class SeedBank {
 
     private ArrayList<String> PlantIncludeList;
     private ArrayList<String> PlantExcludeList;
-    // todo: PlantPresetList since you can change levels
+
+    private ArrayList<Plant> PresetPlantList;
 
     private Integer OverrideSeedSlotsCount;
     private String SelectionMethod;
 
-    public SeedBank(ArrayList<String> plantIncludeList, ArrayList<String> plantExcludeList, Integer overrideSeedSlotsCount, String selectionMethod) {
+    public SeedBank(ArrayList<String> plantIncludeList, ArrayList<String> plantExcludeList, ArrayList<Plant> preset, Integer overrideSeedSlotsCount, String selectionMethod) {
         PlantIncludeList = plantIncludeList;
         PlantExcludeList = plantExcludeList;
+        PresetPlantList = preset;
         OverrideSeedSlotsCount = overrideSeedSlotsCount;
         SelectionMethod = selectionMethod;
     }
 
 
     public static SeedBank NewChooser() {
-        return new SeedBank(null, null, null, CHOOSER);
+        return new SeedBank(null, null, null, null, CHOOSER);
     }
 
     public static SeedBank NewPreset() {
-        return new SeedBank(null, null, null, PRESET);
+        return new SeedBank(null, null, null, null, PRESET);
     }
 
     public void setSlotOverride(int SO) {
@@ -35,6 +39,10 @@ public class SeedBank {
 
     public void setWhiteList (ArrayList<String> whitelist) {
         this.PlantIncludeList = whitelist;
+    }
+
+    public void setPreset (ArrayList<Plant> list) {
+        this.PresetPlantList = list;
     }
 
     public void setBlackList(ArrayList<String> list) {
